@@ -14,6 +14,5 @@ index.html — point d'entrée
 css/style.css — styles visuels
 data/data.js — données (titres / descriptions / images)
 js/script.js — logique Vue.js
- Lancer le projet
-
+ 
 
