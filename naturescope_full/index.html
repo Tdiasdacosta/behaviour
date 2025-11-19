@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NatureScope | Explore the Natural World</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/290/290092.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header class="site-header">
+      <h1>Découvrez les Merveilles du Monde</h1>
+      <p class="tagline">Cliquez pour alterner entre le titre et l'explication de chaque merveille naturelle.</p>
+    </header>
+
+    <main id="app">
+      <section @click="isFlipped = !isFlipped" class="card">
+        <div class="image-container">
+          <img :src="facts[index].image" :alt="facts[index].title" />
+        </div>
+        <div class="text-container">
+          <h2 v-text="isFlipped ? '' : facts[index].title"></h2>
+          <p v-text="isFlipped ? facts[index].desc : ''"></p>
+        </div>
+      </section>
+
+      <div class="buttons">
+        <button @click="move(-1)">Précédent</button>
+        <button @click="move(1)">Suivant</button>
+      </div>
+
+      <p class="progress-text">Fait {{ index + 1 }} sur {{ facts.length }}</p>
+    </main>
+
+    <footer>
+      &copy; <span id="year"></span> NatureScope | Version complète
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./data/data.js"></script>
+  <script src="./js/script.js"></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

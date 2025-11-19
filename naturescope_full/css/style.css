@@ -1,0 +1,31 @@
+body {
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #eee;
+}
+.wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.card {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+  border: 2px solid #4fc3f7;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+.buttons button {
+  padding: .7rem 1.4rem;
+  background: #4fc3f7;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
